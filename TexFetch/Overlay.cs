@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace TexFetch {
+
+
+
+
     class OverlayForm : Form {
         public OverlayForm() {
             SetStyle(ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
@@ -117,7 +122,16 @@ namespace TexFetch {
                         instance.selection.Update();
                         instance.form.Visible = false;
 
-                        this.ScreenShot = TexFetch.Snip(instance.selection.x, instance.selection.y, instance.selection.w, instance.selection.h);
+
+                        int sf = Utils.GetScaleFactor();
+
+
+                        this.ScreenShot = TexFetch.Snip(
+                           sf * instance.selection.x,
+                           sf * instance.selection.y,
+                           sf * instance.selection.w,
+                           sf * instance.selection.h
+                           );
 
 
                         //Application.Exit();
@@ -132,6 +146,9 @@ namespace TexFetch {
 
                 return false;
             }
+
+            
+
         }
 
         private void overlayKeyDown(object sender, KeyEventArgs e) {

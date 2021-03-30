@@ -15,7 +15,11 @@ namespace TexFetch
 
             Image screenshot = takeScreenshot();
 
-            Rectangle rect = new Rectangle(Screen.left * -1 + x, Screen.top * -1 + y, w, h);
+            Rectangle rect = new Rectangle(
+                Utils.GetScaleFactor() * Screen.left * -1 + x, 
+                Utils.GetScaleFactor() * Screen.top  * -1 + y, 
+                w, 
+                h);
             Bitmap originalImage = new Bitmap(screenshot, screenshot.Width, screenshot.Height);
 
             if(w <= 0 || h <= 0)
@@ -38,9 +42,12 @@ namespace TexFetch
 
         private static Image takeScreenshot()
         {
-            Bitmap printscreen = new Bitmap(Screen.width, Screen.height);
+            Bitmap printscreen = new Bitmap(Utils.GetScaleFactor() * Screen.width, Utils.GetScaleFactor() * Screen.height);
             Graphics graphics = Graphics.FromImage(printscreen as Image);
-            graphics.CopyFromScreen(Screen.left, Screen.top, 0, 0, printscreen.Size);
+            graphics.CopyFromScreen(
+                Utils.GetScaleFactor() * Screen.left,
+                Utils.GetScaleFactor() * Screen.top, 
+                0, 0, printscreen.Size);
 
             Image scr;
             using (MemoryStream s = new MemoryStream())

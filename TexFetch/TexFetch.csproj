@@ -73,6 +73,7 @@
     <Compile Include="Screen.cs" />
     <Compile Include="ScreenCaptureItem.cs" />
     <Compile Include="TexFetch.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
