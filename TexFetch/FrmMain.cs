@@ -330,8 +330,12 @@ namespace TexFetch
                     }
                     itm.Add(sci);
                 }
-
-                MarkdownGenerator generator = new MarkdownGenerator(itm);
+                MarkdownGenerator.GenerationMode mode = MarkdownGenerator.GenerationMode.Default;
+                if (this.rdbGlossarQA.Checked)
+                {
+                    mode = MarkdownGenerator.GenerationMode.GlossarQA;
+                }
+                MarkdownGenerator generator = new MarkdownGenerator(itm, mode);
 
                 this.txtMkText.Text = generator.Generate();
 

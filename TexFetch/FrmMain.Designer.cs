@@ -39,68 +39,72 @@
             this.btnOverrideAll = new System.Windows.Forms.Button();
             this.btnEnumerate = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.tbSpeech = new System.Windows.Forms.TabPage();
-            this.lblTODO = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tbText = new System.Windows.Forms.TabControl();
+            this.tbTextFromImage = new System.Windows.Forms.TabPage();
+            this.btnCopy = new System.Windows.Forms.Button();
+            this.btnDetect = new System.Windows.Forms.Button();
+            this.btnDetectAllText = new System.Windows.Forms.Button();
+            this.txtText = new System.Windows.Forms.TextBox();
+            this.picPreview = new System.Windows.Forms.PictureBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.tbMkGen = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtMkText = new System.Windows.Forms.TextBox();
-            this.grpOptions = new System.Windows.Forms.GroupBox();
-            this.rdbOneHash = new System.Windows.Forms.RadioButton();
-            this.rdbTwoHash = new System.Windows.Forms.RadioButton();
+            this.grpGenerationMode = new System.Windows.Forms.GroupBox();
+            this.rdbGlossarQA = new System.Windows.Forms.RadioButton();
+            this.rdbDefault = new System.Windows.Forms.RadioButton();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.rdbThreeHash = new System.Windows.Forms.RadioButton();
-            this.rdbFourHash = new System.Windows.Forms.RadioButton();
-            this.rdbFiveHash = new System.Windows.Forms.RadioButton();
-            this.rdbImage = new System.Windows.Forms.RadioButton();
-            this.txtImgName = new System.Windows.Forms.TextBox();
-            this.lblImgName = new System.Windows.Forms.Label();
-            this.rdbSummary = new System.Windows.Forms.RadioButton();
-            this.btnExportImgs = new System.Windows.Forms.Button();
-            this.rdbText = new System.Windows.Forms.RadioButton();
-            this.rdbZSBlock = new System.Windows.Forms.RadioButton();
-            this.rdbBold = new System.Windows.Forms.RadioButton();
-            this.lblZero = new System.Windows.Forms.Label();
-            this.lblOne = new System.Windows.Forms.Label();
-            this.lblTwo = new System.Windows.Forms.Label();
-            this.lblThree = new System.Windows.Forms.Label();
-            this.lblFour = new System.Windows.Forms.Label();
-            this.lblFive = new System.Windows.Forms.Label();
-            this.lblSix = new System.Windows.Forms.Label();
-            this.lblSeven = new System.Windows.Forms.Label();
-            this.lblEight = new System.Windows.Forms.Label();
-            this.lblNine = new System.Windows.Forms.Label();
-            this.rdbList = new System.Windows.Forms.RadioButton();
+            this.grpOptions = new System.Windows.Forms.GroupBox();
             this.lblList = new System.Windows.Forms.Label();
-            this.picPreviewMk = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtImageSaveLoc = new System.Windows.Forms.TextBox();
+            this.rdbList = new System.Windows.Forms.RadioButton();
+            this.lblNine = new System.Windows.Forms.Label();
+            this.lblEight = new System.Windows.Forms.Label();
+            this.lblSeven = new System.Windows.Forms.Label();
+            this.lblSix = new System.Windows.Forms.Label();
+            this.lblFive = new System.Windows.Forms.Label();
+            this.lblFour = new System.Windows.Forms.Label();
+            this.lblThree = new System.Windows.Forms.Label();
+            this.lblTwo = new System.Windows.Forms.Label();
+            this.lblOne = new System.Windows.Forms.Label();
+            this.lblZero = new System.Windows.Forms.Label();
+            this.rdbBold = new System.Windows.Forms.RadioButton();
+            this.rdbZSBlock = new System.Windows.Forms.RadioButton();
+            this.rdbText = new System.Windows.Forms.RadioButton();
+            this.btnExportImgs = new System.Windows.Forms.Button();
+            this.rdbSummary = new System.Windows.Forms.RadioButton();
+            this.lblImgName = new System.Windows.Forms.Label();
+            this.txtImgName = new System.Windows.Forms.TextBox();
+            this.rdbImage = new System.Windows.Forms.RadioButton();
+            this.rdbFiveHash = new System.Windows.Forms.RadioButton();
+            this.rdbFourHash = new System.Windows.Forms.RadioButton();
+            this.rdbThreeHash = new System.Windows.Forms.RadioButton();
+            this.rdbTwoHash = new System.Windows.Forms.RadioButton();
+            this.rdbOneHash = new System.Windows.Forms.RadioButton();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.tbTextFromImage = new System.Windows.Forms.TabPage();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.picPreview = new System.Windows.Forms.PictureBox();
-            this.txtText = new System.Windows.Forms.TextBox();
-            this.btnDetectAllText = new System.Windows.Forms.Button();
-            this.btnDetect = new System.Windows.Forms.Button();
-            this.btnCopy = new System.Windows.Forms.Button();
-            this.tbText = new System.Windows.Forms.TabControl();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtImageSaveLoc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.picPreviewMk = new System.Windows.Forms.PictureBox();
+            this.txtMkText = new System.Windows.Forms.TextBox();
+            this.tbSpeech = new System.Windows.Forms.TabPage();
+            this.lblTODO = new System.Windows.Forms.Label();
             this.ctxCaptureList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.tbSpeech.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tbText.SuspendLayout();
+            this.tbTextFromImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             this.tbMkGen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.grpGenerationMode.SuspendLayout();
             this.grpOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPreviewMk)).BeginInit();
-            this.tbTextFromImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
-            this.tbText.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tbSpeech.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCapture
@@ -212,25 +216,111 @@
             this.splitContainer2.SplitterDistance = 470;
             this.splitContainer2.TabIndex = 16;
             // 
-            // tbSpeech
+            // panel1
             // 
-            this.tbSpeech.Controls.Add(this.lblTODO);
-            this.tbSpeech.Location = new System.Drawing.Point(4, 22);
-            this.tbSpeech.Name = "tbSpeech";
-            this.tbSpeech.Padding = new System.Windows.Forms.Padding(3);
-            this.tbSpeech.Size = new System.Drawing.Size(1134, 848);
-            this.tbSpeech.TabIndex = 3;
-            this.tbSpeech.Text = "Speech";
-            this.tbSpeech.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnRemove);
+            this.panel1.Controls.Add(this.btnEnumerate);
+            this.panel1.Controls.Add(this.btnOverrideAll);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 814);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(470, 60);
+            this.panel1.TabIndex = 2;
             // 
-            // lblTODO
+            // tbText
             // 
-            this.lblTODO.AutoSize = true;
-            this.lblTODO.Location = new System.Drawing.Point(41, 33);
-            this.lblTODO.Name = "lblTODO";
-            this.lblTODO.Size = new System.Drawing.Size(38, 13);
-            this.lblTODO.TabIndex = 0;
-            this.lblTODO.Text = "TODO";
+            this.tbText.Controls.Add(this.tbTextFromImage);
+            this.tbText.Controls.Add(this.tbMkGen);
+            this.tbText.Controls.Add(this.tbSpeech);
+            this.tbText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbText.Location = new System.Drawing.Point(0, 0);
+            this.tbText.Name = "tbText";
+            this.tbText.SelectedIndex = 0;
+            this.tbText.Size = new System.Drawing.Size(1142, 874);
+            this.tbText.TabIndex = 12;
+            // 
+            // tbTextFromImage
+            // 
+            this.tbTextFromImage.Controls.Add(this.btnCopy);
+            this.tbTextFromImage.Controls.Add(this.btnDetect);
+            this.tbTextFromImage.Controls.Add(this.btnDetectAllText);
+            this.tbTextFromImage.Controls.Add(this.txtText);
+            this.tbTextFromImage.Controls.Add(this.picPreview);
+            this.tbTextFromImage.Controls.Add(this.btnSave);
+            this.tbTextFromImage.Location = new System.Drawing.Point(4, 22);
+            this.tbTextFromImage.Name = "tbTextFromImage";
+            this.tbTextFromImage.Padding = new System.Windows.Forms.Padding(3);
+            this.tbTextFromImage.Size = new System.Drawing.Size(1134, 848);
+            this.tbTextFromImage.TabIndex = 0;
+            this.tbTextFromImage.Text = "Text from Image";
+            this.tbTextFromImage.UseVisualStyleBackColor = true;
+            // 
+            // btnCopy
+            // 
+            this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCopy.Location = new System.Drawing.Point(1068, 819);
+            this.btnCopy.Name = "btnCopy";
+            this.btnCopy.Size = new System.Drawing.Size(58, 22);
+            this.btnCopy.TabIndex = 13;
+            this.btnCopy.Text = "Copy";
+            this.btnCopy.UseVisualStyleBackColor = true;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
+            // 
+            // btnDetect
+            // 
+            this.btnDetect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDetect.Location = new System.Drawing.Point(6, 820);
+            this.btnDetect.Name = "btnDetect";
+            this.btnDetect.Size = new System.Drawing.Size(99, 22);
+            this.btnDetect.TabIndex = 12;
+            this.btnDetect.Text = "Detect";
+            this.btnDetect.UseVisualStyleBackColor = true;
+            this.btnDetect.Click += new System.EventHandler(this.btnDetect_Click);
+            // 
+            // btnDetectAllText
+            // 
+            this.btnDetectAllText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDetectAllText.Location = new System.Drawing.Point(111, 820);
+            this.btnDetectAllText.Name = "btnDetectAllText";
+            this.btnDetectAllText.Size = new System.Drawing.Size(99, 22);
+            this.btnDetectAllText.TabIndex = 11;
+            this.btnDetectAllText.Text = "Detect all";
+            this.btnDetectAllText.UseVisualStyleBackColor = true;
+            this.btnDetectAllText.Click += new System.EventHandler(this.btnDetectAllText_Click);
+            // 
+            // txtText
+            // 
+            this.txtText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtText.Location = new System.Drawing.Point(6, 627);
+            this.txtText.Multiline = true;
+            this.txtText.Name = "txtText";
+            this.txtText.Size = new System.Drawing.Size(1120, 187);
+            this.txtText.TabIndex = 10;
+            // 
+            // picPreview
+            // 
+            this.picPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picPreview.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.picPreview.Location = new System.Drawing.Point(6, 6);
+            this.picPreview.Name = "picPreview";
+            this.picPreview.Size = new System.Drawing.Size(1120, 587);
+            this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picPreview.TabIndex = 9;
+            this.picPreview.TabStop = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(1068, 599);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(58, 22);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // tbMkGen
             // 
@@ -251,6 +341,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.grpGenerationMode);
             this.splitContainer1.Panel1.Controls.Add(this.grpOptions);
             this.splitContainer1.Panel1.Controls.Add(this.btnBrowse);
             this.splitContainer1.Panel1.Controls.Add(this.txtImageSaveLoc);
@@ -264,14 +355,53 @@
             this.splitContainer1.SplitterDistance = 756;
             this.splitContainer1.TabIndex = 46;
             // 
-            // txtMkText
+            // grpGenerationMode
             // 
-            this.txtMkText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMkText.Location = new System.Drawing.Point(0, 0);
-            this.txtMkText.Multiline = true;
-            this.txtMkText.Name = "txtMkText";
-            this.txtMkText.Size = new System.Drawing.Size(368, 842);
-            this.txtMkText.TabIndex = 40;
+            this.grpGenerationMode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpGenerationMode.Controls.Add(this.rdbGlossarQA);
+            this.grpGenerationMode.Controls.Add(this.rdbDefault);
+            this.grpGenerationMode.Controls.Add(this.btnGenerate);
+            this.grpGenerationMode.Location = new System.Drawing.Point(4, 665);
+            this.grpGenerationMode.Name = "grpGenerationMode";
+            this.grpGenerationMode.Size = new System.Drawing.Size(748, 172);
+            this.grpGenerationMode.TabIndex = 50;
+            this.grpGenerationMode.TabStop = false;
+            this.grpGenerationMode.Text = "Generation Mode";
+            // 
+            // rdbGlossarQA
+            // 
+            this.rdbGlossarQA.AutoSize = true;
+            this.rdbGlossarQA.Location = new System.Drawing.Point(45, 53);
+            this.rdbGlossarQA.Name = "rdbGlossarQA";
+            this.rdbGlossarQA.Size = new System.Drawing.Size(78, 17);
+            this.rdbGlossarQA.TabIndex = 15;
+            this.rdbGlossarQA.TabStop = true;
+            this.rdbGlossarQA.Text = "Glossar QA";
+            this.rdbGlossarQA.UseVisualStyleBackColor = true;
+            // 
+            // rdbDefault
+            // 
+            this.rdbDefault.AutoSize = true;
+            this.rdbDefault.Checked = true;
+            this.rdbDefault.Location = new System.Drawing.Point(45, 30);
+            this.rdbDefault.Name = "rdbDefault";
+            this.rdbDefault.Size = new System.Drawing.Size(59, 17);
+            this.rdbDefault.TabIndex = 14;
+            this.rdbDefault.TabStop = true;
+            this.rdbDefault.Text = "Default";
+            this.rdbDefault.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerate.Location = new System.Drawing.Point(639, 143);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(95, 22);
+            this.btnGenerate.TabIndex = 13;
+            this.btnGenerate.Text = "Generate";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // grpOptions
             // 
@@ -300,7 +430,6 @@
             this.grpOptions.Controls.Add(this.rdbFiveHash);
             this.grpOptions.Controls.Add(this.rdbFourHash);
             this.grpOptions.Controls.Add(this.rdbThreeHash);
-            this.grpOptions.Controls.Add(this.btnGenerate);
             this.grpOptions.Controls.Add(this.rdbTwoHash);
             this.grpOptions.Controls.Add(this.rdbOneHash);
             this.grpOptions.Location = new System.Drawing.Point(4, 337);
@@ -310,119 +439,158 @@
             this.grpOptions.TabStop = false;
             this.grpOptions.Text = "Options";
             // 
-            // rdbOneHash
+            // lblList
             // 
-            this.rdbOneHash.AutoSize = true;
-            this.rdbOneHash.Location = new System.Drawing.Point(45, 52);
-            this.rdbOneHash.Name = "rdbOneHash";
-            this.rdbOneHash.Size = new System.Drawing.Size(32, 17);
-            this.rdbOneHash.TabIndex = 14;
-            this.rdbOneHash.TabStop = true;
-            this.rdbOneHash.Text = "#";
-            this.rdbOneHash.UseVisualStyleBackColor = true;
-            this.rdbOneHash.CheckedChanged += new System.EventHandler(this.rdbOneHash_CheckedChanged);
+            this.lblList.AutoSize = true;
+            this.lblList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblList.Location = new System.Drawing.Point(15, 259);
+            this.lblList.Name = "lblList";
+            this.lblList.Size = new System.Drawing.Size(14, 13);
+            this.lblList.TabIndex = 38;
+            this.lblList.Text = "+";
             // 
-            // rdbTwoHash
+            // rdbList
             // 
-            this.rdbTwoHash.AutoSize = true;
-            this.rdbTwoHash.Location = new System.Drawing.Point(45, 75);
-            this.rdbTwoHash.Name = "rdbTwoHash";
-            this.rdbTwoHash.Size = new System.Drawing.Size(39, 17);
-            this.rdbTwoHash.TabIndex = 15;
-            this.rdbTwoHash.TabStop = true;
-            this.rdbTwoHash.Text = "##";
-            this.rdbTwoHash.UseVisualStyleBackColor = true;
-            this.rdbTwoHash.CheckedChanged += new System.EventHandler(this.rdbTwoHash_CheckedChanged);
+            this.rdbList.AutoSize = true;
+            this.rdbList.Location = new System.Drawing.Point(45, 257);
+            this.rdbList.Name = "rdbList";
+            this.rdbList.Size = new System.Drawing.Size(72, 17);
+            this.rdbList.TabIndex = 37;
+            this.rdbList.Text = "+ List item";
+            this.rdbList.UseVisualStyleBackColor = true;
             // 
-            // btnGenerate
+            // lblNine
             // 
-            this.btnGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerate.Location = new System.Drawing.Point(556, 294);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(77, 22);
-            this.btnGenerate.TabIndex = 13;
-            this.btnGenerate.Text = "Generate";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            this.lblNine.AutoSize = true;
+            this.lblNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNine.Location = new System.Drawing.Point(15, 236);
+            this.lblNine.Name = "lblNine";
+            this.lblNine.Size = new System.Drawing.Size(14, 13);
+            this.lblNine.TabIndex = 36;
+            this.lblNine.Text = "9";
             // 
-            // rdbThreeHash
+            // lblEight
             // 
-            this.rdbThreeHash.AutoSize = true;
-            this.rdbThreeHash.Location = new System.Drawing.Point(45, 98);
-            this.rdbThreeHash.Name = "rdbThreeHash";
-            this.rdbThreeHash.Size = new System.Drawing.Size(46, 17);
-            this.rdbThreeHash.TabIndex = 16;
-            this.rdbThreeHash.TabStop = true;
-            this.rdbThreeHash.Text = "###";
-            this.rdbThreeHash.UseVisualStyleBackColor = true;
-            this.rdbThreeHash.CheckedChanged += new System.EventHandler(this.rdbThreeHash_CheckedChanged);
+            this.lblEight.AutoSize = true;
+            this.lblEight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEight.Location = new System.Drawing.Point(15, 213);
+            this.lblEight.Name = "lblEight";
+            this.lblEight.Size = new System.Drawing.Size(14, 13);
+            this.lblEight.TabIndex = 35;
+            this.lblEight.Text = "8";
             // 
-            // rdbFourHash
+            // lblSeven
             // 
-            this.rdbFourHash.AutoSize = true;
-            this.rdbFourHash.Location = new System.Drawing.Point(45, 121);
-            this.rdbFourHash.Name = "rdbFourHash";
-            this.rdbFourHash.Size = new System.Drawing.Size(53, 17);
-            this.rdbFourHash.TabIndex = 17;
-            this.rdbFourHash.TabStop = true;
-            this.rdbFourHash.Text = "####";
-            this.rdbFourHash.UseVisualStyleBackColor = true;
-            this.rdbFourHash.CheckedChanged += new System.EventHandler(this.rdbFourHash_CheckedChanged);
+            this.lblSeven.AutoSize = true;
+            this.lblSeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeven.Location = new System.Drawing.Point(15, 190);
+            this.lblSeven.Name = "lblSeven";
+            this.lblSeven.Size = new System.Drawing.Size(14, 13);
+            this.lblSeven.TabIndex = 34;
+            this.lblSeven.Text = "7";
             // 
-            // rdbFiveHash
+            // lblSix
             // 
-            this.rdbFiveHash.AutoSize = true;
-            this.rdbFiveHash.Location = new System.Drawing.Point(45, 144);
-            this.rdbFiveHash.Name = "rdbFiveHash";
-            this.rdbFiveHash.Size = new System.Drawing.Size(60, 17);
-            this.rdbFiveHash.TabIndex = 18;
-            this.rdbFiveHash.TabStop = true;
-            this.rdbFiveHash.Text = "#####";
-            this.rdbFiveHash.UseVisualStyleBackColor = true;
-            this.rdbFiveHash.CheckedChanged += new System.EventHandler(this.rdbFiveHash_CheckedChanged);
+            this.lblSix.AutoSize = true;
+            this.lblSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSix.Location = new System.Drawing.Point(15, 168);
+            this.lblSix.Name = "lblSix";
+            this.lblSix.Size = new System.Drawing.Size(14, 13);
+            this.lblSix.TabIndex = 33;
+            this.lblSix.Text = "6";
             // 
-            // rdbImage
+            // lblFive
             // 
-            this.rdbImage.AutoSize = true;
-            this.rdbImage.Location = new System.Drawing.Point(45, 165);
-            this.rdbImage.Name = "rdbImage";
-            this.rdbImage.Size = new System.Drawing.Size(54, 17);
-            this.rdbImage.TabIndex = 19;
-            this.rdbImage.TabStop = true;
-            this.rdbImage.Text = "Image";
-            this.rdbImage.UseVisualStyleBackColor = true;
-            this.rdbImage.CheckedChanged += new System.EventHandler(this.rdbImage_CheckedChanged);
+            this.lblFive.AutoSize = true;
+            this.lblFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFive.Location = new System.Drawing.Point(15, 146);
+            this.lblFive.Name = "lblFive";
+            this.lblFive.Size = new System.Drawing.Size(14, 13);
+            this.lblFive.TabIndex = 32;
+            this.lblFive.Text = "5";
             // 
-            // txtImgName
+            // lblFour
             // 
-            this.txtImgName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImgName.Location = new System.Drawing.Point(243, 164);
-            this.txtImgName.Name = "txtImgName";
-            this.txtImgName.Size = new System.Drawing.Size(491, 20);
-            this.txtImgName.TabIndex = 20;
-            this.txtImgName.TextChanged += new System.EventHandler(this.txtImgName_TextChanged);
+            this.lblFour.AutoSize = true;
+            this.lblFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFour.Location = new System.Drawing.Point(15, 123);
+            this.lblFour.Name = "lblFour";
+            this.lblFour.Size = new System.Drawing.Size(14, 13);
+            this.lblFour.TabIndex = 31;
+            this.lblFour.Text = "4";
             // 
-            // lblImgName
+            // lblThree
             // 
-            this.lblImgName.AutoSize = true;
-            this.lblImgName.Location = new System.Drawing.Point(169, 167);
-            this.lblImgName.Name = "lblImgName";
-            this.lblImgName.Size = new System.Drawing.Size(68, 13);
-            this.lblImgName.TabIndex = 21;
-            this.lblImgName.Text = "Image name:";
+            this.lblThree.AutoSize = true;
+            this.lblThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThree.Location = new System.Drawing.Point(15, 100);
+            this.lblThree.Name = "lblThree";
+            this.lblThree.Size = new System.Drawing.Size(14, 13);
+            this.lblThree.TabIndex = 30;
+            this.lblThree.Text = "3";
             // 
-            // rdbSummary
+            // lblTwo
             // 
-            this.rdbSummary.AutoSize = true;
-            this.rdbSummary.Location = new System.Drawing.Point(45, 188);
-            this.rdbSummary.Name = "rdbSummary";
-            this.rdbSummary.Size = new System.Drawing.Size(114, 17);
-            this.rdbSummary.TabIndex = 22;
-            this.rdbSummary.TabStop = true;
-            this.rdbSummary.Text = "Zusammenfassung";
-            this.rdbSummary.UseVisualStyleBackColor = true;
-            this.rdbSummary.CheckedChanged += new System.EventHandler(this.rdbSummary_CheckedChanged);
+            this.lblTwo.AutoSize = true;
+            this.lblTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwo.Location = new System.Drawing.Point(15, 79);
+            this.lblTwo.Name = "lblTwo";
+            this.lblTwo.Size = new System.Drawing.Size(14, 13);
+            this.lblTwo.TabIndex = 29;
+            this.lblTwo.Text = "2";
+            // 
+            // lblOne
+            // 
+            this.lblOne.AutoSize = true;
+            this.lblOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOne.Location = new System.Drawing.Point(15, 56);
+            this.lblOne.Name = "lblOne";
+            this.lblOne.Size = new System.Drawing.Size(14, 13);
+            this.lblOne.TabIndex = 28;
+            this.lblOne.Text = "1";
+            // 
+            // lblZero
+            // 
+            this.lblZero.AutoSize = true;
+            this.lblZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblZero.Location = new System.Drawing.Point(15, 31);
+            this.lblZero.Name = "lblZero";
+            this.lblZero.Size = new System.Drawing.Size(14, 13);
+            this.lblZero.TabIndex = 27;
+            this.lblZero.Text = "0";
+            // 
+            // rdbBold
+            // 
+            this.rdbBold.AutoSize = true;
+            this.rdbBold.Location = new System.Drawing.Point(45, 234);
+            this.rdbBold.Name = "rdbBold";
+            this.rdbBold.Size = new System.Drawing.Size(62, 17);
+            this.rdbBold.TabIndex = 26;
+            this.rdbBold.Text = "**Bold**";
+            this.rdbBold.UseVisualStyleBackColor = true;
+            this.rdbBold.CheckedChanged += new System.EventHandler(this.rdbBold_CheckedChanged);
+            // 
+            // rdbZSBlock
+            // 
+            this.rdbZSBlock.AutoSize = true;
+            this.rdbZSBlock.Location = new System.Drawing.Point(45, 211);
+            this.rdbZSBlock.Name = "rdbZSBlock";
+            this.rdbZSBlock.Size = new System.Drawing.Size(69, 17);
+            this.rdbZSBlock.TabIndex = 25;
+            this.rdbZSBlock.Text = "ZS Block";
+            this.rdbZSBlock.UseVisualStyleBackColor = true;
+            this.rdbZSBlock.CheckedChanged += new System.EventHandler(this.rdbZSBlock_CheckedChanged);
+            // 
+            // rdbText
+            // 
+            this.rdbText.AutoSize = true;
+            this.rdbText.Location = new System.Drawing.Point(45, 29);
+            this.rdbText.Name = "rdbText";
+            this.rdbText.Size = new System.Drawing.Size(46, 17);
+            this.rdbText.TabIndex = 24;
+            this.rdbText.Text = "Text";
+            this.rdbText.UseVisualStyleBackColor = true;
+            this.rdbText.CheckedChanged += new System.EventHandler(this.rdbText_CheckedChanged);
             // 
             // btnExportImgs
             // 
@@ -435,162 +603,133 @@
             this.btnExportImgs.UseVisualStyleBackColor = true;
             this.btnExportImgs.Click += new System.EventHandler(this.btnExportImgs_Click);
             // 
-            // rdbText
+            // rdbSummary
             // 
-            this.rdbText.AutoSize = true;
-            this.rdbText.Location = new System.Drawing.Point(45, 29);
-            this.rdbText.Name = "rdbText";
-            this.rdbText.Size = new System.Drawing.Size(46, 17);
-            this.rdbText.TabIndex = 24;
-            this.rdbText.TabStop = true;
-            this.rdbText.Text = "Text";
-            this.rdbText.UseVisualStyleBackColor = true;
-            this.rdbText.CheckedChanged += new System.EventHandler(this.rdbText_CheckedChanged);
+            this.rdbSummary.AutoSize = true;
+            this.rdbSummary.Location = new System.Drawing.Point(45, 188);
+            this.rdbSummary.Name = "rdbSummary";
+            this.rdbSummary.Size = new System.Drawing.Size(114, 17);
+            this.rdbSummary.TabIndex = 22;
+            this.rdbSummary.Text = "Zusammenfassung";
+            this.rdbSummary.UseVisualStyleBackColor = true;
+            this.rdbSummary.CheckedChanged += new System.EventHandler(this.rdbSummary_CheckedChanged);
             // 
-            // rdbZSBlock
+            // lblImgName
             // 
-            this.rdbZSBlock.AutoSize = true;
-            this.rdbZSBlock.Location = new System.Drawing.Point(45, 211);
-            this.rdbZSBlock.Name = "rdbZSBlock";
-            this.rdbZSBlock.Size = new System.Drawing.Size(69, 17);
-            this.rdbZSBlock.TabIndex = 25;
-            this.rdbZSBlock.TabStop = true;
-            this.rdbZSBlock.Text = "ZS Block";
-            this.rdbZSBlock.UseVisualStyleBackColor = true;
-            this.rdbZSBlock.CheckedChanged += new System.EventHandler(this.rdbZSBlock_CheckedChanged);
+            this.lblImgName.AutoSize = true;
+            this.lblImgName.Location = new System.Drawing.Point(169, 167);
+            this.lblImgName.Name = "lblImgName";
+            this.lblImgName.Size = new System.Drawing.Size(68, 13);
+            this.lblImgName.TabIndex = 21;
+            this.lblImgName.Text = "Image name:";
             // 
-            // rdbBold
+            // txtImgName
             // 
-            this.rdbBold.AutoSize = true;
-            this.rdbBold.Location = new System.Drawing.Point(45, 234);
-            this.rdbBold.Name = "rdbBold";
-            this.rdbBold.Size = new System.Drawing.Size(62, 17);
-            this.rdbBold.TabIndex = 26;
-            this.rdbBold.TabStop = true;
-            this.rdbBold.Text = "**Bold**";
-            this.rdbBold.UseVisualStyleBackColor = true;
-            this.rdbBold.CheckedChanged += new System.EventHandler(this.rdbBold_CheckedChanged);
+            this.txtImgName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtImgName.Location = new System.Drawing.Point(243, 164);
+            this.txtImgName.Name = "txtImgName";
+            this.txtImgName.Size = new System.Drawing.Size(491, 20);
+            this.txtImgName.TabIndex = 20;
+            this.txtImgName.TextChanged += new System.EventHandler(this.txtImgName_TextChanged);
             // 
-            // lblZero
+            // rdbImage
             // 
-            this.lblZero.AutoSize = true;
-            this.lblZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZero.Location = new System.Drawing.Point(15, 31);
-            this.lblZero.Name = "lblZero";
-            this.lblZero.Size = new System.Drawing.Size(14, 13);
-            this.lblZero.TabIndex = 27;
-            this.lblZero.Text = "0";
+            this.rdbImage.AutoSize = true;
+            this.rdbImage.Location = new System.Drawing.Point(45, 165);
+            this.rdbImage.Name = "rdbImage";
+            this.rdbImage.Size = new System.Drawing.Size(54, 17);
+            this.rdbImage.TabIndex = 19;
+            this.rdbImage.Text = "Image";
+            this.rdbImage.UseVisualStyleBackColor = true;
+            this.rdbImage.CheckedChanged += new System.EventHandler(this.rdbImage_CheckedChanged);
             // 
-            // lblOne
+            // rdbFiveHash
             // 
-            this.lblOne.AutoSize = true;
-            this.lblOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOne.Location = new System.Drawing.Point(15, 56);
-            this.lblOne.Name = "lblOne";
-            this.lblOne.Size = new System.Drawing.Size(14, 13);
-            this.lblOne.TabIndex = 28;
-            this.lblOne.Text = "1";
+            this.rdbFiveHash.AutoSize = true;
+            this.rdbFiveHash.Location = new System.Drawing.Point(45, 144);
+            this.rdbFiveHash.Name = "rdbFiveHash";
+            this.rdbFiveHash.Size = new System.Drawing.Size(60, 17);
+            this.rdbFiveHash.TabIndex = 18;
+            this.rdbFiveHash.Text = "#####";
+            this.rdbFiveHash.UseVisualStyleBackColor = true;
+            this.rdbFiveHash.CheckedChanged += new System.EventHandler(this.rdbFiveHash_CheckedChanged);
             // 
-            // lblTwo
+            // rdbFourHash
             // 
-            this.lblTwo.AutoSize = true;
-            this.lblTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTwo.Location = new System.Drawing.Point(15, 79);
-            this.lblTwo.Name = "lblTwo";
-            this.lblTwo.Size = new System.Drawing.Size(14, 13);
-            this.lblTwo.TabIndex = 29;
-            this.lblTwo.Text = "2";
+            this.rdbFourHash.AutoSize = true;
+            this.rdbFourHash.Location = new System.Drawing.Point(45, 121);
+            this.rdbFourHash.Name = "rdbFourHash";
+            this.rdbFourHash.Size = new System.Drawing.Size(53, 17);
+            this.rdbFourHash.TabIndex = 17;
+            this.rdbFourHash.Text = "####";
+            this.rdbFourHash.UseVisualStyleBackColor = true;
+            this.rdbFourHash.CheckedChanged += new System.EventHandler(this.rdbFourHash_CheckedChanged);
             // 
-            // lblThree
+            // rdbThreeHash
             // 
-            this.lblThree.AutoSize = true;
-            this.lblThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThree.Location = new System.Drawing.Point(15, 100);
-            this.lblThree.Name = "lblThree";
-            this.lblThree.Size = new System.Drawing.Size(14, 13);
-            this.lblThree.TabIndex = 30;
-            this.lblThree.Text = "3";
+            this.rdbThreeHash.AutoSize = true;
+            this.rdbThreeHash.Location = new System.Drawing.Point(45, 98);
+            this.rdbThreeHash.Name = "rdbThreeHash";
+            this.rdbThreeHash.Size = new System.Drawing.Size(46, 17);
+            this.rdbThreeHash.TabIndex = 16;
+            this.rdbThreeHash.Text = "###";
+            this.rdbThreeHash.UseVisualStyleBackColor = true;
+            this.rdbThreeHash.CheckedChanged += new System.EventHandler(this.rdbThreeHash_CheckedChanged);
             // 
-            // lblFour
+            // rdbTwoHash
             // 
-            this.lblFour.AutoSize = true;
-            this.lblFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFour.Location = new System.Drawing.Point(15, 123);
-            this.lblFour.Name = "lblFour";
-            this.lblFour.Size = new System.Drawing.Size(14, 13);
-            this.lblFour.TabIndex = 31;
-            this.lblFour.Text = "4";
+            this.rdbTwoHash.AutoSize = true;
+            this.rdbTwoHash.Location = new System.Drawing.Point(45, 75);
+            this.rdbTwoHash.Name = "rdbTwoHash";
+            this.rdbTwoHash.Size = new System.Drawing.Size(39, 17);
+            this.rdbTwoHash.TabIndex = 15;
+            this.rdbTwoHash.Text = "##";
+            this.rdbTwoHash.UseVisualStyleBackColor = true;
+            this.rdbTwoHash.CheckedChanged += new System.EventHandler(this.rdbTwoHash_CheckedChanged);
             // 
-            // lblFive
+            // rdbOneHash
             // 
-            this.lblFive.AutoSize = true;
-            this.lblFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFive.Location = new System.Drawing.Point(15, 146);
-            this.lblFive.Name = "lblFive";
-            this.lblFive.Size = new System.Drawing.Size(14, 13);
-            this.lblFive.TabIndex = 32;
-            this.lblFive.Text = "5";
+            this.rdbOneHash.AutoSize = true;
+            this.rdbOneHash.Checked = true;
+            this.rdbOneHash.Location = new System.Drawing.Point(45, 52);
+            this.rdbOneHash.Name = "rdbOneHash";
+            this.rdbOneHash.Size = new System.Drawing.Size(32, 17);
+            this.rdbOneHash.TabIndex = 14;
+            this.rdbOneHash.TabStop = true;
+            this.rdbOneHash.Text = "#";
+            this.rdbOneHash.UseVisualStyleBackColor = true;
+            this.rdbOneHash.CheckedChanged += new System.EventHandler(this.rdbOneHash_CheckedChanged);
             // 
-            // lblSix
+            // btnBrowse
             // 
-            this.lblSix.AutoSize = true;
-            this.lblSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSix.Location = new System.Drawing.Point(15, 168);
-            this.lblSix.Name = "lblSix";
-            this.lblSix.Size = new System.Drawing.Size(14, 13);
-            this.lblSix.TabIndex = 33;
-            this.lblSix.Text = "6";
+            this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowse.Location = new System.Drawing.Point(722, 311);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(30, 20);
+            this.btnBrowse.TabIndex = 49;
+            this.btnBrowse.Text = "...";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // lblSeven
+            // txtImageSaveLoc
             // 
-            this.lblSeven.AutoSize = true;
-            this.lblSeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeven.Location = new System.Drawing.Point(15, 190);
-            this.lblSeven.Name = "lblSeven";
-            this.lblSeven.Size = new System.Drawing.Size(14, 13);
-            this.lblSeven.TabIndex = 34;
-            this.lblSeven.Text = "7";
+            this.txtImageSaveLoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtImageSaveLoc.Location = new System.Drawing.Point(119, 311);
+            this.txtImageSaveLoc.Name = "txtImageSaveLoc";
+            this.txtImageSaveLoc.Size = new System.Drawing.Size(597, 20);
+            this.txtImageSaveLoc.TabIndex = 48;
             // 
-            // lblEight
+            // label1
             // 
-            this.lblEight.AutoSize = true;
-            this.lblEight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEight.Location = new System.Drawing.Point(15, 213);
-            this.lblEight.Name = "lblEight";
-            this.lblEight.Size = new System.Drawing.Size(14, 13);
-            this.lblEight.TabIndex = 35;
-            this.lblEight.Text = "8";
-            // 
-            // lblNine
-            // 
-            this.lblNine.AutoSize = true;
-            this.lblNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNine.Location = new System.Drawing.Point(15, 236);
-            this.lblNine.Name = "lblNine";
-            this.lblNine.Size = new System.Drawing.Size(14, 13);
-            this.lblNine.TabIndex = 36;
-            this.lblNine.Text = "9";
-            // 
-            // rdbList
-            // 
-            this.rdbList.AutoSize = true;
-            this.rdbList.Location = new System.Drawing.Point(45, 257);
-            this.rdbList.Name = "rdbList";
-            this.rdbList.Size = new System.Drawing.Size(72, 17);
-            this.rdbList.TabIndex = 37;
-            this.rdbList.TabStop = true;
-            this.rdbList.Text = "+ List item";
-            this.rdbList.UseVisualStyleBackColor = true;
-            // 
-            // lblList
-            // 
-            this.lblList.AutoSize = true;
-            this.lblList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblList.Location = new System.Drawing.Point(15, 259);
-            this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(14, 13);
-            this.lblList.TabIndex = 38;
-            this.lblList.Text = "+";
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 314);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Image save location:";
             // 
             // picPreviewMk
             // 
@@ -605,141 +744,34 @@
             this.picPreviewMk.TabIndex = 46;
             this.picPreviewMk.TabStop = false;
             // 
-            // label1
+            // txtMkText
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 314);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 13);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Image save location:";
+            this.txtMkText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMkText.Location = new System.Drawing.Point(0, 0);
+            this.txtMkText.Multiline = true;
+            this.txtMkText.Name = "txtMkText";
+            this.txtMkText.Size = new System.Drawing.Size(368, 842);
+            this.txtMkText.TabIndex = 40;
             // 
-            // txtImageSaveLoc
+            // tbSpeech
             // 
-            this.txtImageSaveLoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImageSaveLoc.Location = new System.Drawing.Point(119, 311);
-            this.txtImageSaveLoc.Name = "txtImageSaveLoc";
-            this.txtImageSaveLoc.Size = new System.Drawing.Size(597, 20);
-            this.txtImageSaveLoc.TabIndex = 48;
+            this.tbSpeech.Controls.Add(this.lblTODO);
+            this.tbSpeech.Location = new System.Drawing.Point(4, 22);
+            this.tbSpeech.Name = "tbSpeech";
+            this.tbSpeech.Padding = new System.Windows.Forms.Padding(3);
+            this.tbSpeech.Size = new System.Drawing.Size(1134, 848);
+            this.tbSpeech.TabIndex = 3;
+            this.tbSpeech.Text = "Speech";
+            this.tbSpeech.UseVisualStyleBackColor = true;
             // 
-            // btnBrowse
+            // lblTODO
             // 
-            this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowse.Location = new System.Drawing.Point(722, 311);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(30, 20);
-            this.btnBrowse.TabIndex = 49;
-            this.btnBrowse.Text = "...";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
-            // tbTextFromImage
-            // 
-            this.tbTextFromImage.Controls.Add(this.btnCopy);
-            this.tbTextFromImage.Controls.Add(this.btnDetect);
-            this.tbTextFromImage.Controls.Add(this.btnDetectAllText);
-            this.tbTextFromImage.Controls.Add(this.txtText);
-            this.tbTextFromImage.Controls.Add(this.picPreview);
-            this.tbTextFromImage.Controls.Add(this.btnSave);
-            this.tbTextFromImage.Location = new System.Drawing.Point(4, 22);
-            this.tbTextFromImage.Name = "tbTextFromImage";
-            this.tbTextFromImage.Padding = new System.Windows.Forms.Padding(3);
-            this.tbTextFromImage.Size = new System.Drawing.Size(1134, 848);
-            this.tbTextFromImage.TabIndex = 0;
-            this.tbTextFromImage.Text = "Text from Image";
-            this.tbTextFromImage.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(1068, 599);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(58, 22);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // picPreview
-            // 
-            this.picPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picPreview.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.picPreview.Location = new System.Drawing.Point(6, 6);
-            this.picPreview.Name = "picPreview";
-            this.picPreview.Size = new System.Drawing.Size(1120, 587);
-            this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picPreview.TabIndex = 9;
-            this.picPreview.TabStop = false;
-            // 
-            // txtText
-            // 
-            this.txtText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtText.Location = new System.Drawing.Point(6, 627);
-            this.txtText.Multiline = true;
-            this.txtText.Name = "txtText";
-            this.txtText.Size = new System.Drawing.Size(1120, 187);
-            this.txtText.TabIndex = 10;
-            // 
-            // btnDetectAllText
-            // 
-            this.btnDetectAllText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDetectAllText.Location = new System.Drawing.Point(111, 820);
-            this.btnDetectAllText.Name = "btnDetectAllText";
-            this.btnDetectAllText.Size = new System.Drawing.Size(99, 22);
-            this.btnDetectAllText.TabIndex = 11;
-            this.btnDetectAllText.Text = "Detect all";
-            this.btnDetectAllText.UseVisualStyleBackColor = true;
-            this.btnDetectAllText.Click += new System.EventHandler(this.btnDetectAllText_Click);
-            // 
-            // btnDetect
-            // 
-            this.btnDetect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDetect.Location = new System.Drawing.Point(6, 820);
-            this.btnDetect.Name = "btnDetect";
-            this.btnDetect.Size = new System.Drawing.Size(99, 22);
-            this.btnDetect.TabIndex = 12;
-            this.btnDetect.Text = "Detect";
-            this.btnDetect.UseVisualStyleBackColor = true;
-            this.btnDetect.Click += new System.EventHandler(this.btnDetect_Click);
-            // 
-            // btnCopy
-            // 
-            this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopy.Location = new System.Drawing.Point(1068, 819);
-            this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(58, 22);
-            this.btnCopy.TabIndex = 13;
-            this.btnCopy.Text = "Copy";
-            this.btnCopy.UseVisualStyleBackColor = true;
-            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
-            // 
-            // tbText
-            // 
-            this.tbText.Controls.Add(this.tbTextFromImage);
-            this.tbText.Controls.Add(this.tbMkGen);
-            this.tbText.Controls.Add(this.tbSpeech);
-            this.tbText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbText.Location = new System.Drawing.Point(0, 0);
-            this.tbText.Name = "tbText";
-            this.tbText.SelectedIndex = 0;
-            this.tbText.Size = new System.Drawing.Size(1142, 874);
-            this.tbText.TabIndex = 12;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnClear);
-            this.panel1.Controls.Add(this.btnRemove);
-            this.panel1.Controls.Add(this.btnEnumerate);
-            this.panel1.Controls.Add(this.btnOverrideAll);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 814);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(470, 60);
-            this.panel1.TabIndex = 2;
+            this.lblTODO.AutoSize = true;
+            this.lblTODO.Location = new System.Drawing.Point(41, 33);
+            this.lblTODO.Name = "lblTODO";
+            this.lblTODO.Size = new System.Drawing.Size(38, 13);
+            this.lblTODO.TabIndex = 0;
+            this.lblTODO.Text = "TODO";
             // 
             // FrmMain
             // 
@@ -754,8 +786,11 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.tbSpeech.ResumeLayout(false);
-            this.tbSpeech.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.tbText.ResumeLayout(false);
+            this.tbTextFromImage.ResumeLayout(false);
+            this.tbTextFromImage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview)).EndInit();
             this.tbMkGen.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -763,14 +798,13 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.grpGenerationMode.ResumeLayout(false);
+            this.grpGenerationMode.PerformLayout();
             this.grpOptions.ResumeLayout(false);
             this.grpOptions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPreviewMk)).EndInit();
-            this.tbTextFromImage.ResumeLayout(false);
-            this.tbTextFromImage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPreview)).EndInit();
-            this.tbText.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.tbSpeech.ResumeLayout(false);
+            this.tbSpeech.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -832,5 +866,8 @@
         private System.Windows.Forms.TabPage tbSpeech;
         private System.Windows.Forms.Label lblTODO;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox grpGenerationMode;
+        private System.Windows.Forms.RadioButton rdbDefault;
+        private System.Windows.Forms.RadioButton rdbGlossarQA;
     }
 }
