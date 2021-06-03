@@ -135,7 +135,7 @@ namespace TexFetch
             string text = string.Empty;
 
             ScreenCaptureItem item = new ScreenCaptureItem(DateTime.Now.ToString(), gr, string.Empty);
-
+            item.ImageName = "img_" + this.lstCapture.Items.Count.ToString();
             this.lstCapture.Items.Add(item);
 
             this.lstCapture.SelectedIndex = this.lstCapture.Items.Count - 1;
@@ -354,7 +354,11 @@ namespace TexFetch
                 if (sci.GenrationType == MkGenrationType.Image)
                 {
                     string path = Path.Combine(this.txtImageSaveLoc.Text, sci.ImageName + ".png");
-                    sci.Image.Save(path);
+                    if(sci.Image != null)
+                    {
+                        sci.Image.Save(path);
+                    }
+                    
                 }
             }
         }
