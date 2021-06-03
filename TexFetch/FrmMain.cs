@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +40,6 @@ namespace TexFetch
 
         private void updateMarkdownOptions(ScreenCaptureItem sci)
         {
-
             this.rdbText.Checked      = sci.GenrationType == MkGenrationType.Text;
             this.rdbOneHash.Checked   = sci.GenrationType == MkGenrationType.OneHash;
             this.rdbTwoHash.Checked   = sci.GenrationType == MkGenrationType.TwoHash;
@@ -106,10 +106,8 @@ namespace TexFetch
                 itm.GenrationType = MkGenrationType.List;
             }
 
-
             this.txtImgName.Enabled = this.rdbImage.Checked;
             this.lstCapture.Items[this.lstCapture.SelectedIndices[0]] = itm;
-
 
             this.updateMarkdownOptions(itm);
         }
@@ -537,16 +535,26 @@ namespace TexFetch
                 return;
             }
 
-            foreach (var itm in this.lstCapture.Items)
-            {
-                var sci = (ScreenCaptureItem)itm;
+            for (int i = 0; i < this.lstCapture.Items.Count; i++)
+            { 
+                var sci = (ScreenCaptureItem)this.lstCapture.Items[i];
                 sci.GenrationType = curr_itm.GenrationType;
+
+                this.lstCapture.Items[i] = sci;
             }
         }
 
         private void btnEnumerate_Click(object sender, EventArgs e)
         {
-            //var test = Interaction.InputBox()
+            var input = Interaction.InputBox("Begin index", "Enter begin index", "0");
+            int beginIdx = Convert.ToInt32(input);
+
+            foreach (var itm in this.lstCapture.Items)
+            {
+                var sci = (ScreenCaptureItem)itm;
+                sci.ImageName = "img_" + (beginIdx++).ToString();
+            }
+
         }
 
         #endregion

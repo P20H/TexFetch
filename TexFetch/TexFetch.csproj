@@ -54,6 +54,12 @@
     <StartupObject>TexFetch.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CtrTextGenerator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrTextGenerator.Designer.cs">
+      <DependentUpon>CtrTextGenerator.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,7 @@
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -620,6 +627,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CtrTextGenerator.resx">
+      <DependentUpon>CtrTextGenerator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
