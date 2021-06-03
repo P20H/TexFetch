@@ -523,6 +523,32 @@ namespace TexFetch
             
         }
 
+
+        private void btnOverrideAll_Click(object sender, EventArgs e)
+        {
+            if(this.lstCapture.Items.Count <= 0 || this.lstCapture.SelectedItems.Count <= 0)
+            {
+                return;
+            }
+
+            ScreenCaptureItem curr_itm = (ScreenCaptureItem)this.lstCapture.SelectedItem;
+            if (curr_itm == null)
+            {
+                return;
+            }
+
+            foreach (var itm in this.lstCapture.Items)
+            {
+                var sci = (ScreenCaptureItem)itm;
+                sci.GenrationType = curr_itm.GenrationType;
+            }
+        }
+
+        private void btnEnumerate_Click(object sender, EventArgs e)
+        {
+            //var test = Interaction.InputBox()
+        }
+
         #endregion
 
     }

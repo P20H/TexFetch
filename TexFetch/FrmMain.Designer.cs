@@ -51,6 +51,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.picPreviewMk = new System.Windows.Forms.PictureBox();
             this.grpOptions = new System.Windows.Forms.GroupBox();
+            this.lblList = new System.Windows.Forms.Label();
+            this.rdbList = new System.Windows.Forms.RadioButton();
             this.lblNine = new System.Windows.Forms.Label();
             this.lblEight = new System.Windows.Forms.Label();
             this.lblSeven = new System.Windows.Forms.Label();
@@ -76,11 +78,11 @@
             this.rdbTwoHash = new System.Windows.Forms.RadioButton();
             this.rdbOneHash = new System.Windows.Forms.RadioButton();
             this.txtMkText = new System.Windows.Forms.TextBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.rdbList = new System.Windows.Forms.RadioButton();
-            this.lblList = new System.Windows.Forms.Label();
             this.tbSpeech = new System.Windows.Forms.TabPage();
             this.lblTODO = new System.Windows.Forms.Label();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.btnOverrideAll = new System.Windows.Forms.Button();
+            this.btnEnumerate = new System.Windows.Forms.Button();
             this.ctxCaptureList.SuspendLayout();
             this.tbText.SuspendLayout();
             this.tbTextFromImage.SuspendLayout();
@@ -97,9 +99,10 @@
             // 
             // btnCapture
             // 
-            this.btnCapture.Location = new System.Drawing.Point(12, 12);
+            this.btnCapture.Location = new System.Drawing.Point(24, 23);
+            this.btnCapture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCapture.Name = "btnCapture";
-            this.btnCapture.Size = new System.Drawing.Size(372, 49);
+            this.btnCapture.Size = new System.Drawing.Size(744, 94);
             this.btnCapture.TabIndex = 0;
             this.btnCapture.Text = "Capture";
             this.btnCapture.UseVisualStyleBackColor = true;
@@ -111,41 +114,45 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lstCapture.ContextMenuStrip = this.ctxCaptureList;
             this.lstCapture.FormattingEnabled = true;
-            this.lstCapture.Location = new System.Drawing.Point(12, 67);
+            this.lstCapture.ItemHeight = 25;
+            this.lstCapture.Location = new System.Drawing.Point(24, 129);
+            this.lstCapture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.lstCapture.Name = "lstCapture";
-            this.lstCapture.Size = new System.Drawing.Size(372, 706);
+            this.lstCapture.Size = new System.Drawing.Size(740, 1354);
             this.lstCapture.TabIndex = 1;
             this.lstCapture.SelectedIndexChanged += new System.EventHandler(this.lstCapture_SelectedIndexChanged);
             this.lstCapture.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstCapture_KeyPress);
             // 
             // ctxCaptureList
             // 
+            this.ctxCaptureList.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.ctxCaptureList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.removeItemToolStripMenuItem,
             this.updateScreenshotToolStripMenuItem});
             this.ctxCaptureList.Name = "ctxCaptureList";
-            this.ctxCaptureList.Size = new System.Drawing.Size(174, 48);
+            this.ctxCaptureList.Size = new System.Drawing.Size(293, 80);
             // 
             // removeItemToolStripMenuItem
             // 
             this.removeItemToolStripMenuItem.Name = "removeItemToolStripMenuItem";
-            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(292, 38);
             this.removeItemToolStripMenuItem.Text = "Remove Item";
             this.removeItemToolStripMenuItem.Click += new System.EventHandler(this.removeItemToolStripMenuItem_Click);
             // 
             // updateScreenshotToolStripMenuItem
             // 
             this.updateScreenshotToolStripMenuItem.Name = "updateScreenshotToolStripMenuItem";
-            this.updateScreenshotToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.updateScreenshotToolStripMenuItem.Size = new System.Drawing.Size(292, 38);
             this.updateScreenshotToolStripMenuItem.Text = "Update Screenshot";
             this.updateScreenshotToolStripMenuItem.Click += new System.EventHandler(this.updateScreenshotToolStripMenuItem_Click);
             // 
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnRemove.Location = new System.Drawing.Point(12, 797);
+            this.btnRemove.Location = new System.Drawing.Point(24, 1533);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(58, 22);
+            this.btnRemove.Size = new System.Drawing.Size(116, 42);
             this.btnRemove.TabIndex = 4;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -154,9 +161,10 @@
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnClear.Location = new System.Drawing.Point(76, 797);
+            this.btnClear.Location = new System.Drawing.Point(152, 1533);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(58, 22);
+            this.btnClear.Size = new System.Drawing.Size(116, 42);
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -170,10 +178,11 @@
             this.tbText.Controls.Add(this.tbTextFromImage);
             this.tbText.Controls.Add(this.tbMkGen);
             this.tbText.Controls.Add(this.tbSpeech);
-            this.tbText.Location = new System.Drawing.Point(390, 12);
+            this.tbText.Location = new System.Drawing.Point(780, 23);
+            this.tbText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbText.Name = "tbText";
             this.tbText.SelectedIndex = 0;
-            this.tbText.Size = new System.Drawing.Size(1206, 772);
+            this.tbText.Size = new System.Drawing.Size(2412, 1485);
             this.tbText.TabIndex = 12;
             // 
             // tbTextFromImage
@@ -184,10 +193,11 @@
             this.tbTextFromImage.Controls.Add(this.txtText);
             this.tbTextFromImage.Controls.Add(this.picPreview);
             this.tbTextFromImage.Controls.Add(this.btnSave);
-            this.tbTextFromImage.Location = new System.Drawing.Point(4, 22);
+            this.tbTextFromImage.Location = new System.Drawing.Point(8, 39);
+            this.tbTextFromImage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbTextFromImage.Name = "tbTextFromImage";
-            this.tbTextFromImage.Padding = new System.Windows.Forms.Padding(3);
-            this.tbTextFromImage.Size = new System.Drawing.Size(1198, 746);
+            this.tbTextFromImage.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbTextFromImage.Size = new System.Drawing.Size(2396, 1438);
             this.tbTextFromImage.TabIndex = 0;
             this.tbTextFromImage.Text = "Text from Image";
             this.tbTextFromImage.UseVisualStyleBackColor = true;
@@ -195,9 +205,10 @@
             // btnCopy
             // 
             this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopy.Location = new System.Drawing.Point(1132, 717);
+            this.btnCopy.Location = new System.Drawing.Point(2264, 1379);
+            this.btnCopy.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(58, 22);
+            this.btnCopy.Size = new System.Drawing.Size(116, 42);
             this.btnCopy.TabIndex = 13;
             this.btnCopy.Text = "Copy";
             this.btnCopy.UseVisualStyleBackColor = true;
@@ -206,9 +217,10 @@
             // btnDetect
             // 
             this.btnDetect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDetect.Location = new System.Drawing.Point(6, 718);
+            this.btnDetect.Location = new System.Drawing.Point(12, 1381);
+            this.btnDetect.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnDetect.Name = "btnDetect";
-            this.btnDetect.Size = new System.Drawing.Size(99, 22);
+            this.btnDetect.Size = new System.Drawing.Size(198, 42);
             this.btnDetect.TabIndex = 12;
             this.btnDetect.Text = "Detect";
             this.btnDetect.UseVisualStyleBackColor = true;
@@ -217,9 +229,10 @@
             // btnDetectAllText
             // 
             this.btnDetectAllText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDetectAllText.Location = new System.Drawing.Point(111, 718);
+            this.btnDetectAllText.Location = new System.Drawing.Point(222, 1381);
+            this.btnDetectAllText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnDetectAllText.Name = "btnDetectAllText";
-            this.btnDetectAllText.Size = new System.Drawing.Size(99, 22);
+            this.btnDetectAllText.Size = new System.Drawing.Size(198, 42);
             this.btnDetectAllText.TabIndex = 11;
             this.btnDetectAllText.Text = "Detect all";
             this.btnDetectAllText.UseVisualStyleBackColor = true;
@@ -229,10 +242,11 @@
             // 
             this.txtText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtText.Location = new System.Drawing.Point(6, 525);
+            this.txtText.Location = new System.Drawing.Point(12, 1010);
+            this.txtText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtText.Multiline = true;
             this.txtText.Name = "txtText";
-            this.txtText.Size = new System.Drawing.Size(1184, 187);
+            this.txtText.Size = new System.Drawing.Size(2364, 356);
             this.txtText.TabIndex = 10;
             // 
             // picPreview
@@ -241,9 +255,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picPreview.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.picPreview.Location = new System.Drawing.Point(6, 6);
+            this.picPreview.Location = new System.Drawing.Point(12, 12);
+            this.picPreview.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.picPreview.Name = "picPreview";
-            this.picPreview.Size = new System.Drawing.Size(1184, 485);
+            this.picPreview.Size = new System.Drawing.Size(2368, 933);
             this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picPreview.TabIndex = 9;
             this.picPreview.TabStop = false;
@@ -251,9 +266,10 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(1132, 497);
+            this.btnSave.Location = new System.Drawing.Point(2264, 956);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(58, 22);
+            this.btnSave.Size = new System.Drawing.Size(116, 42);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -261,10 +277,11 @@
             // tbMkGen
             // 
             this.tbMkGen.Controls.Add(this.splitContainer1);
-            this.tbMkGen.Location = new System.Drawing.Point(4, 22);
+            this.tbMkGen.Location = new System.Drawing.Point(8, 39);
+            this.tbMkGen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbMkGen.Name = "tbMkGen";
-            this.tbMkGen.Padding = new System.Windows.Forms.Padding(3);
-            this.tbMkGen.Size = new System.Drawing.Size(1198, 746);
+            this.tbMkGen.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbMkGen.Size = new System.Drawing.Size(2396, 1438);
             this.tbMkGen.TabIndex = 2;
             this.tbMkGen.Text = "Markdown";
             this.tbMkGen.UseVisualStyleBackColor = true;
@@ -272,7 +289,8 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Location = new System.Drawing.Point(6, 6);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -286,16 +304,18 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.txtMkText);
-            this.splitContainer1.Size = new System.Drawing.Size(1192, 740);
-            this.splitContainer1.SplitterDistance = 552;
+            this.splitContainer1.Size = new System.Drawing.Size(2384, 1426);
+            this.splitContainer1.SplitterDistance = 1104;
+            this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 46;
             // 
             // btnBrowse
             // 
             this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowse.Location = new System.Drawing.Point(518, 209);
+            this.btnBrowse.Location = new System.Drawing.Point(1036, 405);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(30, 20);
+            this.btnBrowse.Size = new System.Drawing.Size(60, 38);
             this.btnBrowse.TabIndex = 49;
             this.btnBrowse.Text = "...";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -305,18 +325,20 @@
             // 
             this.txtImageSaveLoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImageSaveLoc.Location = new System.Drawing.Point(119, 209);
+            this.txtImageSaveLoc.Location = new System.Drawing.Point(238, 405);
+            this.txtImageSaveLoc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtImageSaveLoc.Name = "txtImageSaveLoc";
-            this.txtImageSaveLoc.Size = new System.Drawing.Size(393, 20);
+            this.txtImageSaveLoc.Size = new System.Drawing.Size(782, 31);
             this.txtImageSaveLoc.TabIndex = 48;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 212);
+            this.label1.Location = new System.Drawing.Point(16, 411);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.Size = new System.Drawing.Size(209, 25);
             this.label1.TabIndex = 47;
             this.label1.Text = "Image save location:";
             // 
@@ -326,9 +348,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picPreviewMk.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.picPreviewMk.Location = new System.Drawing.Point(3, 3);
+            this.picPreviewMk.Location = new System.Drawing.Point(6, 6);
+            this.picPreviewMk.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.picPreviewMk.Name = "picPreviewMk";
-            this.picPreviewMk.Size = new System.Drawing.Size(545, 193);
+            this.picPreviewMk.Size = new System.Drawing.Size(1090, 374);
             this.picPreviewMk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picPreviewMk.TabIndex = 46;
             this.picPreviewMk.TabStop = false;
@@ -363,20 +386,46 @@
             this.grpOptions.Controls.Add(this.btnGenerate);
             this.grpOptions.Controls.Add(this.rdbTwoHash);
             this.grpOptions.Controls.Add(this.rdbOneHash);
-            this.grpOptions.Location = new System.Drawing.Point(4, 235);
+            this.grpOptions.Location = new System.Drawing.Point(8, 455);
+            this.grpOptions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grpOptions.Name = "grpOptions";
-            this.grpOptions.Size = new System.Drawing.Size(545, 322);
+            this.grpOptions.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grpOptions.Size = new System.Drawing.Size(1090, 619);
             this.grpOptions.TabIndex = 45;
             this.grpOptions.TabStop = false;
             this.grpOptions.Text = "Options";
+            // 
+            // lblList
+            // 
+            this.lblList.AutoSize = true;
+            this.lblList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblList.Location = new System.Drawing.Point(30, 498);
+            this.lblList.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblList.Name = "lblList";
+            this.lblList.Size = new System.Drawing.Size(26, 26);
+            this.lblList.TabIndex = 38;
+            this.lblList.Text = "+";
+            // 
+            // rdbList
+            // 
+            this.rdbList.AutoSize = true;
+            this.rdbList.Location = new System.Drawing.Point(90, 494);
+            this.rdbList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rdbList.Name = "rdbList";
+            this.rdbList.Size = new System.Drawing.Size(141, 29);
+            this.rdbList.TabIndex = 37;
+            this.rdbList.TabStop = true;
+            this.rdbList.Text = "+ List item";
+            this.rdbList.UseVisualStyleBackColor = true;
             // 
             // lblNine
             // 
             this.lblNine.AutoSize = true;
             this.lblNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNine.Location = new System.Drawing.Point(15, 236);
+            this.lblNine.Location = new System.Drawing.Point(30, 454);
+            this.lblNine.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNine.Name = "lblNine";
-            this.lblNine.Size = new System.Drawing.Size(14, 13);
+            this.lblNine.Size = new System.Drawing.Size(25, 26);
             this.lblNine.TabIndex = 36;
             this.lblNine.Text = "9";
             // 
@@ -384,9 +433,10 @@
             // 
             this.lblEight.AutoSize = true;
             this.lblEight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEight.Location = new System.Drawing.Point(15, 213);
+            this.lblEight.Location = new System.Drawing.Point(30, 410);
+            this.lblEight.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblEight.Name = "lblEight";
-            this.lblEight.Size = new System.Drawing.Size(14, 13);
+            this.lblEight.Size = new System.Drawing.Size(25, 26);
             this.lblEight.TabIndex = 35;
             this.lblEight.Text = "8";
             // 
@@ -394,9 +444,10 @@
             // 
             this.lblSeven.AutoSize = true;
             this.lblSeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeven.Location = new System.Drawing.Point(15, 190);
+            this.lblSeven.Location = new System.Drawing.Point(30, 365);
+            this.lblSeven.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSeven.Name = "lblSeven";
-            this.lblSeven.Size = new System.Drawing.Size(14, 13);
+            this.lblSeven.Size = new System.Drawing.Size(25, 26);
             this.lblSeven.TabIndex = 34;
             this.lblSeven.Text = "7";
             // 
@@ -404,9 +455,10 @@
             // 
             this.lblSix.AutoSize = true;
             this.lblSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSix.Location = new System.Drawing.Point(15, 168);
+            this.lblSix.Location = new System.Drawing.Point(30, 323);
+            this.lblSix.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSix.Name = "lblSix";
-            this.lblSix.Size = new System.Drawing.Size(14, 13);
+            this.lblSix.Size = new System.Drawing.Size(25, 26);
             this.lblSix.TabIndex = 33;
             this.lblSix.Text = "6";
             // 
@@ -414,9 +466,10 @@
             // 
             this.lblFive.AutoSize = true;
             this.lblFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFive.Location = new System.Drawing.Point(15, 146);
+            this.lblFive.Location = new System.Drawing.Point(30, 281);
+            this.lblFive.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFive.Name = "lblFive";
-            this.lblFive.Size = new System.Drawing.Size(14, 13);
+            this.lblFive.Size = new System.Drawing.Size(25, 26);
             this.lblFive.TabIndex = 32;
             this.lblFive.Text = "5";
             // 
@@ -424,9 +477,10 @@
             // 
             this.lblFour.AutoSize = true;
             this.lblFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFour.Location = new System.Drawing.Point(15, 123);
+            this.lblFour.Location = new System.Drawing.Point(30, 237);
+            this.lblFour.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFour.Name = "lblFour";
-            this.lblFour.Size = new System.Drawing.Size(14, 13);
+            this.lblFour.Size = new System.Drawing.Size(25, 26);
             this.lblFour.TabIndex = 31;
             this.lblFour.Text = "4";
             // 
@@ -434,9 +488,10 @@
             // 
             this.lblThree.AutoSize = true;
             this.lblThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThree.Location = new System.Drawing.Point(15, 100);
+            this.lblThree.Location = new System.Drawing.Point(30, 192);
+            this.lblThree.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblThree.Name = "lblThree";
-            this.lblThree.Size = new System.Drawing.Size(14, 13);
+            this.lblThree.Size = new System.Drawing.Size(25, 26);
             this.lblThree.TabIndex = 30;
             this.lblThree.Text = "3";
             // 
@@ -444,9 +499,10 @@
             // 
             this.lblTwo.AutoSize = true;
             this.lblTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTwo.Location = new System.Drawing.Point(15, 79);
+            this.lblTwo.Location = new System.Drawing.Point(30, 152);
+            this.lblTwo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTwo.Name = "lblTwo";
-            this.lblTwo.Size = new System.Drawing.Size(14, 13);
+            this.lblTwo.Size = new System.Drawing.Size(25, 26);
             this.lblTwo.TabIndex = 29;
             this.lblTwo.Text = "2";
             // 
@@ -454,9 +510,10 @@
             // 
             this.lblOne.AutoSize = true;
             this.lblOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOne.Location = new System.Drawing.Point(15, 56);
+            this.lblOne.Location = new System.Drawing.Point(30, 108);
+            this.lblOne.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblOne.Name = "lblOne";
-            this.lblOne.Size = new System.Drawing.Size(14, 13);
+            this.lblOne.Size = new System.Drawing.Size(25, 26);
             this.lblOne.TabIndex = 28;
             this.lblOne.Text = "1";
             // 
@@ -464,18 +521,20 @@
             // 
             this.lblZero.AutoSize = true;
             this.lblZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZero.Location = new System.Drawing.Point(15, 31);
+            this.lblZero.Location = new System.Drawing.Point(30, 60);
+            this.lblZero.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblZero.Name = "lblZero";
-            this.lblZero.Size = new System.Drawing.Size(14, 13);
+            this.lblZero.Size = new System.Drawing.Size(25, 26);
             this.lblZero.TabIndex = 27;
             this.lblZero.Text = "0";
             // 
             // rdbBold
             // 
             this.rdbBold.AutoSize = true;
-            this.rdbBold.Location = new System.Drawing.Point(45, 234);
+            this.rdbBold.Location = new System.Drawing.Point(90, 450);
+            this.rdbBold.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbBold.Name = "rdbBold";
-            this.rdbBold.Size = new System.Drawing.Size(62, 17);
+            this.rdbBold.Size = new System.Drawing.Size(118, 29);
             this.rdbBold.TabIndex = 26;
             this.rdbBold.TabStop = true;
             this.rdbBold.Text = "**Bold**";
@@ -485,9 +544,10 @@
             // rdbZSBlock
             // 
             this.rdbZSBlock.AutoSize = true;
-            this.rdbZSBlock.Location = new System.Drawing.Point(45, 211);
+            this.rdbZSBlock.Location = new System.Drawing.Point(90, 406);
+            this.rdbZSBlock.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbZSBlock.Name = "rdbZSBlock";
-            this.rdbZSBlock.Size = new System.Drawing.Size(69, 17);
+            this.rdbZSBlock.Size = new System.Drawing.Size(129, 29);
             this.rdbZSBlock.TabIndex = 25;
             this.rdbZSBlock.TabStop = true;
             this.rdbZSBlock.Text = "ZS Block";
@@ -497,9 +557,10 @@
             // rdbText
             // 
             this.rdbText.AutoSize = true;
-            this.rdbText.Location = new System.Drawing.Point(45, 29);
+            this.rdbText.Location = new System.Drawing.Point(90, 56);
+            this.rdbText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbText.Name = "rdbText";
-            this.rdbText.Size = new System.Drawing.Size(46, 17);
+            this.rdbText.Size = new System.Drawing.Size(85, 29);
             this.rdbText.TabIndex = 24;
             this.rdbText.TabStop = true;
             this.rdbText.Text = "Text";
@@ -509,9 +570,10 @@
             // btnExportImgs
             // 
             this.btnExportImgs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportImgs.Location = new System.Drawing.Point(435, 294);
+            this.btnExportImgs.Location = new System.Drawing.Point(870, 565);
+            this.btnExportImgs.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnExportImgs.Name = "btnExportImgs";
-            this.btnExportImgs.Size = new System.Drawing.Size(95, 22);
+            this.btnExportImgs.Size = new System.Drawing.Size(190, 42);
             this.btnExportImgs.TabIndex = 23;
             this.btnExportImgs.Text = "Export Images";
             this.btnExportImgs.UseVisualStyleBackColor = true;
@@ -520,9 +582,10 @@
             // rdbSummary
             // 
             this.rdbSummary.AutoSize = true;
-            this.rdbSummary.Location = new System.Drawing.Point(45, 188);
+            this.rdbSummary.Location = new System.Drawing.Point(90, 362);
+            this.rdbSummary.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbSummary.Name = "rdbSummary";
-            this.rdbSummary.Size = new System.Drawing.Size(114, 17);
+            this.rdbSummary.Size = new System.Drawing.Size(225, 29);
             this.rdbSummary.TabIndex = 22;
             this.rdbSummary.TabStop = true;
             this.rdbSummary.Text = "Zusammenfassung";
@@ -532,9 +595,10 @@
             // lblImgName
             // 
             this.lblImgName.AutoSize = true;
-            this.lblImgName.Location = new System.Drawing.Point(169, 167);
+            this.lblImgName.Location = new System.Drawing.Point(338, 321);
+            this.lblImgName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblImgName.Name = "lblImgName";
-            this.lblImgName.Size = new System.Drawing.Size(68, 13);
+            this.lblImgName.Size = new System.Drawing.Size(135, 25);
             this.lblImgName.TabIndex = 21;
             this.lblImgName.Text = "Image name:";
             // 
@@ -542,18 +606,20 @@
             // 
             this.txtImgName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImgName.Location = new System.Drawing.Point(243, 164);
+            this.txtImgName.Location = new System.Drawing.Point(486, 315);
+            this.txtImgName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtImgName.Name = "txtImgName";
-            this.txtImgName.Size = new System.Drawing.Size(287, 20);
+            this.txtImgName.Size = new System.Drawing.Size(570, 31);
             this.txtImgName.TabIndex = 20;
             this.txtImgName.TextChanged += new System.EventHandler(this.txtImgName_TextChanged);
             // 
             // rdbImage
             // 
             this.rdbImage.AutoSize = true;
-            this.rdbImage.Location = new System.Drawing.Point(45, 165);
+            this.rdbImage.Location = new System.Drawing.Point(90, 317);
+            this.rdbImage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbImage.Name = "rdbImage";
-            this.rdbImage.Size = new System.Drawing.Size(54, 17);
+            this.rdbImage.Size = new System.Drawing.Size(101, 29);
             this.rdbImage.TabIndex = 19;
             this.rdbImage.TabStop = true;
             this.rdbImage.Text = "Image";
@@ -563,9 +629,10 @@
             // rdbFiveHash
             // 
             this.rdbFiveHash.AutoSize = true;
-            this.rdbFiveHash.Location = new System.Drawing.Point(45, 144);
+            this.rdbFiveHash.Location = new System.Drawing.Point(90, 277);
+            this.rdbFiveHash.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbFiveHash.Name = "rdbFiveHash";
-            this.rdbFiveHash.Size = new System.Drawing.Size(60, 17);
+            this.rdbFiveHash.Size = new System.Drawing.Size(103, 29);
             this.rdbFiveHash.TabIndex = 18;
             this.rdbFiveHash.TabStop = true;
             this.rdbFiveHash.Text = "#####";
@@ -575,9 +642,10 @@
             // rdbFourHash
             // 
             this.rdbFourHash.AutoSize = true;
-            this.rdbFourHash.Location = new System.Drawing.Point(45, 121);
+            this.rdbFourHash.Location = new System.Drawing.Point(90, 233);
+            this.rdbFourHash.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbFourHash.Name = "rdbFourHash";
-            this.rdbFourHash.Size = new System.Drawing.Size(53, 17);
+            this.rdbFourHash.Size = new System.Drawing.Size(91, 29);
             this.rdbFourHash.TabIndex = 17;
             this.rdbFourHash.TabStop = true;
             this.rdbFourHash.Text = "####";
@@ -587,9 +655,10 @@
             // rdbThreeHash
             // 
             this.rdbThreeHash.AutoSize = true;
-            this.rdbThreeHash.Location = new System.Drawing.Point(45, 98);
+            this.rdbThreeHash.Location = new System.Drawing.Point(90, 188);
+            this.rdbThreeHash.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbThreeHash.Name = "rdbThreeHash";
-            this.rdbThreeHash.Size = new System.Drawing.Size(46, 17);
+            this.rdbThreeHash.Size = new System.Drawing.Size(79, 29);
             this.rdbThreeHash.TabIndex = 16;
             this.rdbThreeHash.TabStop = true;
             this.rdbThreeHash.Text = "###";
@@ -599,9 +668,10 @@
             // btnGenerate
             // 
             this.btnGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerate.Location = new System.Drawing.Point(352, 294);
+            this.btnGenerate.Location = new System.Drawing.Point(704, 565);
+            this.btnGenerate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(77, 22);
+            this.btnGenerate.Size = new System.Drawing.Size(154, 42);
             this.btnGenerate.TabIndex = 13;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -610,9 +680,10 @@
             // rdbTwoHash
             // 
             this.rdbTwoHash.AutoSize = true;
-            this.rdbTwoHash.Location = new System.Drawing.Point(45, 75);
+            this.rdbTwoHash.Location = new System.Drawing.Point(90, 144);
+            this.rdbTwoHash.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbTwoHash.Name = "rdbTwoHash";
-            this.rdbTwoHash.Size = new System.Drawing.Size(39, 17);
+            this.rdbTwoHash.Size = new System.Drawing.Size(67, 29);
             this.rdbTwoHash.TabIndex = 15;
             this.rdbTwoHash.TabStop = true;
             this.rdbTwoHash.Text = "##";
@@ -622,9 +693,10 @@
             // rdbOneHash
             // 
             this.rdbOneHash.AutoSize = true;
-            this.rdbOneHash.Location = new System.Drawing.Point(45, 52);
+            this.rdbOneHash.Location = new System.Drawing.Point(90, 100);
+            this.rdbOneHash.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbOneHash.Name = "rdbOneHash";
-            this.rdbOneHash.Size = new System.Drawing.Size(32, 17);
+            this.rdbOneHash.Size = new System.Drawing.Size(55, 29);
             this.rdbOneHash.TabIndex = 14;
             this.rdbOneHash.TabStop = true;
             this.rdbOneHash.Text = "#";
@@ -635,47 +707,20 @@
             // 
             this.txtMkText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtMkText.Location = new System.Drawing.Point(0, 0);
+            this.txtMkText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtMkText.Multiline = true;
             this.txtMkText.Name = "txtMkText";
-            this.txtMkText.Size = new System.Drawing.Size(636, 740);
+            this.txtMkText.Size = new System.Drawing.Size(1272, 1426);
             this.txtMkText.TabIndex = 40;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 839);
-            this.splitter1.TabIndex = 13;
-            this.splitter1.TabStop = false;
-            // 
-            // rdbList
-            // 
-            this.rdbList.AutoSize = true;
-            this.rdbList.Location = new System.Drawing.Point(45, 257);
-            this.rdbList.Name = "rdbList";
-            this.rdbList.Size = new System.Drawing.Size(72, 17);
-            this.rdbList.TabIndex = 37;
-            this.rdbList.TabStop = true;
-            this.rdbList.Text = "+ List item";
-            this.rdbList.UseVisualStyleBackColor = true;
-            // 
-            // lblList
-            // 
-            this.lblList.AutoSize = true;
-            this.lblList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblList.Location = new System.Drawing.Point(15, 259);
-            this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(14, 13);
-            this.lblList.TabIndex = 38;
-            this.lblList.Text = "+";
             // 
             // tbSpeech
             // 
             this.tbSpeech.Controls.Add(this.lblTODO);
-            this.tbSpeech.Location = new System.Drawing.Point(4, 22);
+            this.tbSpeech.Location = new System.Drawing.Point(8, 39);
+            this.tbSpeech.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbSpeech.Name = "tbSpeech";
-            this.tbSpeech.Padding = new System.Windows.Forms.Padding(3);
-            this.tbSpeech.Size = new System.Drawing.Size(1198, 746);
+            this.tbSpeech.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbSpeech.Size = new System.Drawing.Size(2396, 1438);
             this.tbSpeech.TabIndex = 3;
             this.tbSpeech.Text = "Speech";
             this.tbSpeech.UseVisualStyleBackColor = true;
@@ -683,23 +728,60 @@
             // lblTODO
             // 
             this.lblTODO.AutoSize = true;
-            this.lblTODO.Location = new System.Drawing.Point(41, 33);
+            this.lblTODO.Location = new System.Drawing.Point(82, 63);
+            this.lblTODO.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTODO.Name = "lblTODO";
-            this.lblTODO.Size = new System.Drawing.Size(38, 13);
+            this.lblTODO.Size = new System.Drawing.Size(72, 25);
             this.lblTODO.TabIndex = 0;
             this.lblTODO.Text = "TODO";
             // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(6, 1613);
+            this.splitter1.TabIndex = 13;
+            this.splitter1.TabStop = false;
+            // 
+            // btnOverrideAll
+            // 
+            this.btnOverrideAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnOverrideAll.Location = new System.Drawing.Point(340, 1533);
+            this.btnOverrideAll.Margin = new System.Windows.Forms.Padding(6);
+            this.btnOverrideAll.Name = "btnOverrideAll";
+            this.btnOverrideAll.Size = new System.Drawing.Size(435, 42);
+            this.btnOverrideAll.TabIndex = 14;
+            this.btnOverrideAll.Text = "Override all";
+            this.btnOverrideAll.UseVisualStyleBackColor = true;
+            this.btnOverrideAll.Click += new System.EventHandler(this.btnOverrideAll_Click);
+            // 
+            // btnEnumerate
+            // 
+            this.btnEnumerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEnumerate.Location = new System.Drawing.Point(802, 1533);
+            this.btnEnumerate.Margin = new System.Windows.Forms.Padding(6);
+            this.btnEnumerate.Name = "btnEnumerate";
+            this.btnEnumerate.Size = new System.Drawing.Size(435, 42);
+            this.btnEnumerate.TabIndex = 15;
+            this.btnEnumerate.Text = "Enumerate";
+            this.btnEnumerate.UseVisualStyleBackColor = true;
+            this.btnEnumerate.Click += new System.EventHandler(this.btnEnumerate_Click);
+            // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1608, 839);
+            this.ClientSize = new System.Drawing.Size(2740, 1613);
+            this.Controls.Add(this.btnEnumerate);
+            this.Controls.Add(this.btnOverrideAll);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.tbText);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.lstCapture);
             this.Controls.Add(this.btnCapture);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "FrmMain";
             this.Text = "TexFetch";
             this.ctxCaptureList.ResumeLayout(false);
@@ -777,5 +859,7 @@
         private System.Windows.Forms.RadioButton rdbList;
         private System.Windows.Forms.TabPage tbSpeech;
         private System.Windows.Forms.Label lblTODO;
+        private System.Windows.Forms.Button btnOverrideAll;
+        private System.Windows.Forms.Button btnEnumerate;
     }
 }
