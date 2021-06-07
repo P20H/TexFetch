@@ -3,9 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,6 +24,37 @@ namespace TexFetch
 
         #endregion
 
+        #region Static
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr SetWindowsHookEx(int idHook,
+        LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool UnhookWindowsHookEx(IntPtr hhk);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode,
+            IntPtr wParam, IntPtr lParam);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr GetModuleHandle(string lpModuleName);
+
+        private const int WH_KEYBOARD_LL = 13;
+        private const int WM_KEYDOWN = 0x0100;
+        private static LowLevelKeyboardProc _proc = HookCallback;
+        private static IntPtr _hookID = IntPtr.Zero;
+
+        public static FrmMain StaticInstance;
+        #endregion
+
+        #region delegates
+
+        private delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
+
+        #endregion
+
         #region Construktor
 
         public FrmMain()
@@ -32,11 +65,33 @@ namespace TexFetch
             this.txtImageSaveLoc.Text = Properties.Settings.Default.ImageSavePath;
 
             this.grpOptions.Visible = false;
+
+            _hookID = SetHook(_proc);
+
+            FrmMain.StaticInstance = this;
+        }
+
+        ~FrmMain()
+        {
+            UnhookWindowsHookEx(_hookID);
         }
 
         #endregion
 
         #region Private Methods
+
+        private void doCapture()
+        {
+            Overlay ovr = new Overlay();
+            Bitmap gr = ovr.Init();
+            string text = string.Empty;
+
+            ScreenCaptureItem item = new ScreenCaptureItem(DateTime.Now.ToString(), gr, string.Empty);
+            item.ImageName = "img_" + this.lstCapture.Items.Count.ToString();
+            this.lstCapture.Items.Add(item);
+
+            this.lstCapture.SelectedIndex = this.lstCapture.Items.Count - 1;
+        }
 
         private void updateMarkdownOptions(ScreenCaptureItem sci)
         {
@@ -122,21 +177,40 @@ namespace TexFetch
             return text;
         }
 
+        private static IntPtr SetHook(LowLevelKeyboardProc proc)
+        {
+            using (Process curProcess = Process.GetCurrentProcess())
+            using (ProcessModule curModule = curProcess.MainModule)
+            {
+                return SetWindowsHookEx(WH_KEYBOARD_LL, proc,
+                    GetModuleHandle(curModule.ModuleName), 0);
+            }
+        }
+
+        private static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam)
+        {
+            if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
+            {
+                int vkCode = Marshal.ReadInt32(lParam);
+
+                var currKey = (Keys)vkCode;
+
+                if(currKey == Keys.PrintScreen)
+                {
+                    FrmMain.StaticInstance.doCapture();
+                }
+                Console.WriteLine((Keys)vkCode);
+            }
+            return CallNextHookEx(_hookID, nCode, wParam, lParam);
+        }
+
         #endregion
 
         #region Events
 
         private void btnCapture_Click(object sender, EventArgs e)
         {
-            Overlay ovr = new Overlay();
-            Bitmap gr = ovr.Init();
-            string text = string.Empty;
-
-            ScreenCaptureItem item = new ScreenCaptureItem(DateTime.Now.ToString(), gr, string.Empty);
-            item.ImageName = "img_" + this.lstCapture.Items.Count.ToString();
-            this.lstCapture.Items.Add(item);
-
-            this.lstCapture.SelectedIndex = this.lstCapture.Items.Count - 1;
+            this.doCapture();
         }
 
         private void lstCapture_SelectedIndexChanged(object sender, EventArgs e)
@@ -390,7 +464,6 @@ namespace TexFetch
             Properties.Settings.Default.ImageSavePath = path;
             Properties.Settings.Default.Save();
 
-
         }
 
         private void removeItemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -508,7 +581,6 @@ namespace TexFetch
             e.Handled = true;
         }
 
-
         private void txtImgName_TextChanged(object sender, EventArgs e)
         {
             ScreenCaptureItem itm = (ScreenCaptureItem)this.lstCapture.SelectedItem;
@@ -524,7 +596,6 @@ namespace TexFetch
             }
             
         }
-
 
         private void btnOverrideAll_Click(object sender, EventArgs e)
         {
