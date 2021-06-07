@@ -194,12 +194,10 @@ namespace TexFetch
                 int vkCode = Marshal.ReadInt32(lParam);
 
                 var currKey = (Keys)vkCode;
-
                 if(currKey == Keys.PrintScreen)
                 {
                     FrmMain.StaticInstance.doCapture();
                 }
-                Console.WriteLine((Keys)vkCode);
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
         }
