@@ -22,13 +22,22 @@ namespace TexFetch
 
         private TesseractEngine engine;
 
+        private const int WH_KEYBOARD_LL = 13;
+
+        private const int WM_KEYDOWN = 0x0100;
+
+        private static LowLevelKeyboardProc _proc = HookCallback;
+
+        private static IntPtr _hookID = IntPtr.Zero;
+
+        public static FrmMain StaticInstance;
+
         #endregion
 
         #region Static
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern IntPtr SetWindowsHookEx(int idHook,
-        LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
+        private static extern IntPtr SetWindowsHookEx(int idHook, LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -41,12 +50,8 @@ namespace TexFetch
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern IntPtr GetModuleHandle(string lpModuleName);
 
-        private const int WH_KEYBOARD_LL = 13;
-        private const int WM_KEYDOWN = 0x0100;
-        private static LowLevelKeyboardProc _proc = HookCallback;
-        private static IntPtr _hookID = IntPtr.Zero;
+        
 
-        public static FrmMain StaticInstance;
         #endregion
 
         #region delegates
