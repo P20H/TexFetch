@@ -395,7 +395,7 @@ namespace TexFetch
         {
             try
             {
-                List<ScreenCaptureItem> itm = new List<ScreenCaptureItem>();
+                List<ScreenCaptureItem> itmCollection = new List<ScreenCaptureItem>();
 
                 for (int i = 0; i < this.lstCapture.Items.Count; i++)
                 {
@@ -405,16 +405,27 @@ namespace TexFetch
                         sci.Text = this.detectText(sci.Image);
                         sci.TextGenerated = true;
                     }
-                    itm.Add(sci);
+                    itmCollection.Add(sci);
                 }
                 MarkdownGenerator.GenerationMode mode = MarkdownGenerator.GenerationMode.Default;
                 if (this.rdbGlossarQA.Checked)
                 {
                     mode = MarkdownGenerator.GenerationMode.GlossarQA;
+
+                } else if (this.rdbAufgabeLoesung.Checked)
+                {
+                    mode = MarkdownGenerator.GenerationMode.AufgabeLoesung;
                 }
-                MarkdownGenerator generator = new MarkdownGenerator(itm, mode);
+
+                MarkdownGenerator generator = new MarkdownGenerator(itmCollection, mode);
 
                 this.txtMkText.Text = generator.Generate();
+
+                if(this.chkReplaceImgRelPath.Checked)
+                {
+                    this.txtMkText.Text = 
+                        this.txtMkText.Text.Replace("/Content/", this.txtReplaceText.Text);
+                }
 
                 File.WriteAllText("./Preview.md", this.txtMkText.Text);
 

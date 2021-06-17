@@ -87,6 +87,11 @@
             this.txtMkText = new System.Windows.Forms.TextBox();
             this.tbSpeech = new System.Windows.Forms.TabPage();
             this.lblTODO = new System.Windows.Forms.Label();
+            this.chkReplaceImgRelPath = new System.Windows.Forms.CheckBox();
+            this.grpRelPath = new System.Windows.Forms.GroupBox();
+            this.txtReplaceText = new System.Windows.Forms.TextBox();
+            this.lblRelPathDefault = new System.Windows.Forms.Label();
+            this.rdbAufgabeLoesung = new System.Windows.Forms.RadioButton();
             this.ctxCaptureList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -105,6 +110,7 @@
             this.grpOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPreviewMk)).BeginInit();
             this.tbSpeech.SuspendLayout();
+            this.grpRelPath.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCapture
@@ -359,6 +365,8 @@
             // 
             this.grpGenerationMode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpGenerationMode.Controls.Add(this.rdbAufgabeLoesung);
+            this.grpGenerationMode.Controls.Add(this.grpRelPath);
             this.grpGenerationMode.Controls.Add(this.rdbGlossarQA);
             this.grpGenerationMode.Controls.Add(this.rdbDefault);
             this.grpGenerationMode.Controls.Add(this.btnGenerate);
@@ -773,6 +781,55 @@
             this.lblTODO.TabIndex = 0;
             this.lblTODO.Text = "TODO";
             // 
+            // chkReplaceImgRelPath
+            // 
+            this.chkReplaceImgRelPath.AutoSize = true;
+            this.chkReplaceImgRelPath.Location = new System.Drawing.Point(6, 24);
+            this.chkReplaceImgRelPath.Name = "chkReplaceImgRelPath";
+            this.chkReplaceImgRelPath.Size = new System.Drawing.Size(146, 17);
+            this.chkReplaceImgRelPath.TabIndex = 16;
+            this.chkReplaceImgRelPath.Text = "Replace img relative path";
+            this.chkReplaceImgRelPath.UseVisualStyleBackColor = true;
+            // 
+            // grpRelPath
+            // 
+            this.grpRelPath.Controls.Add(this.lblRelPathDefault);
+            this.grpRelPath.Controls.Add(this.txtReplaceText);
+            this.grpRelPath.Controls.Add(this.chkReplaceImgRelPath);
+            this.grpRelPath.Location = new System.Drawing.Point(534, 19);
+            this.grpRelPath.Name = "grpRelPath";
+            this.grpRelPath.Size = new System.Drawing.Size(200, 94);
+            this.grpRelPath.TabIndex = 17;
+            this.grpRelPath.TabStop = false;
+            this.grpRelPath.Text = "Rel. Path";
+            // 
+            // txtReplaceText
+            // 
+            this.txtReplaceText.Location = new System.Drawing.Point(6, 68);
+            this.txtReplaceText.Name = "txtReplaceText";
+            this.txtReplaceText.Size = new System.Drawing.Size(187, 20);
+            this.txtReplaceText.TabIndex = 17;
+            // 
+            // lblRelPathDefault
+            // 
+            this.lblRelPathDefault.AutoSize = true;
+            this.lblRelPathDefault.Location = new System.Drawing.Point(7, 49);
+            this.lblRelPathDefault.Name = "lblRelPathDefault";
+            this.lblRelPathDefault.Size = new System.Drawing.Size(97, 13);
+            this.lblRelPathDefault.TabIndex = 18;
+            this.lblRelPathDefault.Text = "Replace /Content/";
+            // 
+            // rdbAufgabeLoesung
+            // 
+            this.rdbAufgabeLoesung.AutoSize = true;
+            this.rdbAufgabeLoesung.Location = new System.Drawing.Point(45, 77);
+            this.rdbAufgabeLoesung.Name = "rdbAufgabeLoesung";
+            this.rdbAufgabeLoesung.Size = new System.Drawing.Size(117, 17);
+            this.rdbAufgabeLoesung.TabIndex = 18;
+            this.rdbAufgabeLoesung.TabStop = true;
+            this.rdbAufgabeLoesung.Text = "Aufgabe / Loesung";
+            this.rdbAufgabeLoesung.UseVisualStyleBackColor = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -805,6 +862,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPreviewMk)).EndInit();
             this.tbSpeech.ResumeLayout(false);
             this.tbSpeech.PerformLayout();
+            this.grpRelPath.ResumeLayout(false);
+            this.grpRelPath.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -869,5 +928,10 @@
         private System.Windows.Forms.GroupBox grpGenerationMode;
         private System.Windows.Forms.RadioButton rdbDefault;
         private System.Windows.Forms.RadioButton rdbGlossarQA;
+        private System.Windows.Forms.CheckBox chkReplaceImgRelPath;
+        private System.Windows.Forms.GroupBox grpRelPath;
+        private System.Windows.Forms.Label lblRelPathDefault;
+        private System.Windows.Forms.TextBox txtReplaceText;
+        private System.Windows.Forms.RadioButton rdbAufgabeLoesung;
     }
 }

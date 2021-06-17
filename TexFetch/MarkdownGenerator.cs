@@ -12,7 +12,8 @@ namespace TexFetch
         public enum GenerationMode
         {
             Default,
-            GlossarQA
+            GlossarQA,
+            AufgabeLoesung
         }
 
         private List<ScreenCaptureItem> itemsToGenerate;
@@ -29,12 +30,16 @@ namespace TexFetch
 
         public string Generate()
         {
-            if(genMode == GenerationMode.Default)
+            if (genMode == GenerationMode.Default)
             {
                 return this.generateDefault();
             } else if (genMode == GenerationMode.GlossarQA)
             {
                 return this.generateGlossarQA();
+            }
+            else if (genMode == GenerationMode.AufgabeLoesung)
+            {
+                return this.generateAufgabeLoesung();
             }
 
             return string.Empty;
@@ -54,17 +59,17 @@ namespace TexFetch
             bool isQuestion = true;
             foreach (ScreenCaptureItem item in this.itemsToGenerate)
             {
-                if(isQuestion)
+                if (isQuestion)
                 {
                     sb.Add("### Begriff");
                     sb.Add(Environment.NewLine);
-                    sb.Add(this.lineToMarkdown(item, item.GenrationType));
+                    sb.Add(this.itemToMarkdown(item, item.GenrationType));
                     sb.Add(Environment.NewLine);
                     sb.Add("---");
                     sb.Add(Environment.NewLine);
                 } else
                 {
-                    sb.Add(this.lineToMarkdown(item, item.GenrationType));
+                    sb.Add(this.itemToMarkdown(item, item.GenrationType));
                 }
                 isQuestion = !isQuestion;
             }
@@ -90,7 +95,7 @@ namespace TexFetch
                         continue;
                     }
 
-                    sb.Add(this.lineToMarkdown(item, item.GenrationType));
+                    sb.Add(this.itemToMarkdown(item, item.GenrationType));
 
                     sb.Add(@"");
                     sb.Add(@"");
@@ -113,7 +118,46 @@ namespace TexFetch
             return string.Empty;
         }
 
-        private string lineToMarkdown(ScreenCaptureItem item, MkGenrationType genType)
+        private string generateAufgabeLoesung()
+        {
+            List<string> sb = new List<string>();
+
+            foreach (ScreenCaptureItem item in this.itemsToGenerate)
+            {
+                
+                string newRelPathAufgabe = "./Content/Aufgabe/" + item.ImageName + ".png";
+                string newRelPathLoesung = "./Content/Loesung/" + item.ImageName + ".png";
+
+
+                sb.Add("### Aufgabe");
+
+                sb.Add(Environment.NewLine);
+
+                sb.Add("![" + item.ImageName + "_A" + "](" + newRelPathAufgabe + ")");
+
+                sb.Add(Environment.NewLine);
+
+                sb.Add("---");
+
+                sb.Add(Environment.NewLine);
+
+                sb.Add("![" + item.ImageName + "_L"+ "](" + newRelPathLoesung + ")");
+
+                sb.Add(Environment.NewLine);
+
+            }
+
+            string res = string.Empty;
+            foreach (string str in sb)
+            {
+                res += str + Environment.NewLine;
+            }
+
+            return res;
+        }
+
+
+        private string itemToMarkdown(ScreenCaptureItem item, MkGenrationType genType)
         {
             List<string> sb = new List<string>();
 
